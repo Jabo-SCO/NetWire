@@ -1,0 +1,35 @@
+<head>
+<script src="graphFile.js"></script>
+<script type="text/javascript" src="https://visjs.github.io/vis-network/standalone/umd/vis-network.min.js"></script>
+<!--
+  Including other packages like Vis Timeline or Vis Graph3D here won't work.
+  You need the peer build to do that.
+-->
+</head>
+<body>
+ <div id="mynetwork"></div>
+    <script type="text/javascript">
+      var id=0;
+      // create an array with nodes
+      var nodes = new vis.DataSet([]);
+      var edges = new vis.DataSet([]);
+        for (var i=0; i<IPsAndPorts.data.length; i++) {
+	nodes.add([{id: id, label: IPsAndPorts.data[i].IP, group: i }]);
+        id++;
+        for (var j=0; j<IPsAndPorts.data[i].PORTS.length; j++) {
+          nodes.add([{id: id, label: IPsAndPorts.data[i].PORTS[j].toString(), group: i}]);
+          edges.add([{from: id, to: id-j-1}]);
+          id++;
+        }
+      };
+
+      var options = {}
+      // create a network
+      var container = document.getElementById("mynetwork");
+      var data = {
+        nodes: nodes,
+	edges: edges
+      };
+      var network = new vis.Network(container, data, options);
+    </script>
+</body>
