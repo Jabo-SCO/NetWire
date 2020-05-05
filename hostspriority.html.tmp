@@ -1,5 +1,5 @@
 <head>
-<script src="graphFile.js"></script>
+<script src="scanneroutput.json"></script>
 <script type="text/javascript" src="https://visjs.github.io/vis-network/standalone/umd/vis-network.min.js"></script>
 <!--
   Including other packages like Vis Timeline or Vis Graph3D here won't work.
