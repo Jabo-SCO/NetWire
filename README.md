@@ -6,7 +6,7 @@ NetWire gives you a nice visualisation from the output of your scanner tool. Hov
 
 ![Visualisation](netwire.png)
 
-This tool will requires a JSON-formatted file (scanneroutput.json) containing an array of IP's, ports, and services, for example:
+This tool requires a JSON-formatted file (scanneroutput.json) containing an array of IP's, ports, and services, for example:
 
 var data = [
   {
