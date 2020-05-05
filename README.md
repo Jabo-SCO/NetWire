@@ -1,6 +1,8 @@
 # NetWire
 
-NetWire gives you a nice visualisation from the output of your scanner tool.
+v0.1 - 5th May 2020
+
+NetWire gives you a nice visualisation from the output of your scanner tool. Hover over the buttons on the left for a breakdown of hosts running those services.
 
 ![Visualisation](netwire.png)
 
